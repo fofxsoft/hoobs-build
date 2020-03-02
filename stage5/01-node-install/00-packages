@@ -4,4 +4,4 @@ python
 perl
 make
 gcc
-gcc-c++
+g++

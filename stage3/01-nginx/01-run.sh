@@ -1,9 +1,5 @@
 #!/bin/bash -e
 
-#
-# Setup nginx
-#
-
 mkdir -p "${ROOTFS_DIR}/usr/share/hoobs"
 
 install -m 644 files/nginx.conf "${ROOTFS_DIR}/etc/nginx/"
