@@ -11,4 +11,14 @@ rm -rf /hoobs-core.tgz
 
 systemctl daemon-reload
 systemctl enable hoobs
+
+truncate -s 0 /etc/sudoers
+
+echo 'Defaults        env_reset' | tee -a /etc/sudoers
+echo 'Defaults        mail_badpass' | tee -a /etc/sudoers
+echo 'Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"' | tee -a /etc/sudoers
+echo 'Defaults        env_keep += "SSL_CERT_FILE"' | tee -a /etc/sudoers
+echo '' | tee -a /etc/sudoers
+echo 'root    ALL=(ALL:ALL) ALL' | tee -a /etc/sudoers
+echo '%sudo   ALL=(ALL:ALL) NOPASSWD: ALL' | tee -a /etc/sudoers
 EOF
