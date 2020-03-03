@@ -9,8 +9,6 @@ npm install -g --unsafe-perm /hoobs-core.tgz
 
 rm -rf /hoobs-core.tgz
 
-echo 'hoobs    ALL=(ALL) NOPASSWD: ALL' | sudo EDITOR='tee -a' visudo
-
 systemctl daemon-reload
 systemctl enable hoobs
 EOF
